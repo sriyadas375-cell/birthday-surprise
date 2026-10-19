@@ -1,0 +1,325 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Best Friend 💗</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background: linear-gradient(135deg, #ffe0ed, #e5dcff, #d7f5ff);
+  color: #59415f;
+  text-align: center;
+}
+
+#sky {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.balloon {
+  position: absolute;
+  bottom: -80px;
+  font-size: 32px;
+  animation: rise 8s linear forwards;
+}
+
+@keyframes rise {
+  to { transform: translateY(-115vh) rotate(20deg); opacity: .1; }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 14px 75px;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  max-width: 460px;
+  padding: 27px 21px;
+  background: rgba(255,255,255,.94);
+  border: 1px solid #ffffff;
+  border-radius: 26px;
+  box-shadow: 0 12px 35px #8b609b25;
+  animation: appear .35s ease;
+}
+
+.slide.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 { color: #c44f8e; font-size: 29px; }
+h2 { color: #9259b5; font-size: 24px; }
+p { font-size: 16px; line-height: 1.8; }
+.big { font-size: 62px; margin: 12px; }
+.reason {
+  background: #fff0f7;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 9px 0;
+  text-align: left;
+  line-height: 1.6;
+  font-size: 15px;
+}
+button {
+  border: 0;
+  border-radius: 25px;
+  padding: 12px 19px;
+  margin: 7px 3px;
+  background: #c65d9e;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.back { background: #9983b8; }
+button:active { transform: scale(.97); }
+#progress {
+  position: fixed;
+  z-index: 3;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  color: #725580;
+}
+#gift { font-size: 75px; cursor: pointer; }
+.hidden { display: none; }
+.wish { color: #bd4b8a; font-weight: bold; }
+</style>
+</head>
+
+<body>
+<div id="sky"></div>
+
+<main>
+
+<!-- SLIDE 1: WELCOME -->
+<section class="slide active">
+  <div class="big">🎂🎈</div>
+  <h1>Hey, Birthday Boy! 🐼</h1>
+  <p>To my favourite partner in madness, my best friend, and the person this little surprise is made for. 💗</p>
+  <p>I've prepared something special for you. No skipping! 😌🎁</p>
+  <button onclick="go(1)">Open Your Surprise 💌 →</button>
+</section>
+
+<!-- SLIDE 2: FRIENDSHIP MESSAGE -->
+<section class="slide">
+  <div class="big">🫶🏻💗</div>
+  <h2>A Little Message About Us</h2>
+  <p>
+    You know, not every friendship needs a perfect story.
+    Sometimes it's just random conversations, silly jokes,
+    teasing each other, sharing little moments, and having
+    someone who makes an ordinary day feel better.
+    I'm genuinely glad that our paths crossed.
+    You became someone whose presence and friendship
+    mean a lot to me. I may not always say it properly,
+    but I truly appreciate you and the bond we share.
+    No matter how busy life gets, I hope we always
+    find reasons to laugh and make new memories. 🤍
+  </p>
+  <p class="wish">Happy Birthday, Mr panda! 🥹💝</p>
+  <button class="back" onclick="go(0)">← Back</button>
+  <button onclick="go(2)">Next: 5 Reasons 💕 →</button>
+</section>
+
+<!-- SLIDE 3: FIVE REASONS -->
+<section class="slide">
+  <div class="big">🌷✨</div>
+  <h2>5 Reasons You're Special</h2>
+
+  <div class="reason">
+    💗 <b>1. Your presence</b><br>
+    You can make an ordinary moment feel special just by being part of it.
+  </div>
+
+  <div class="reason">
+    😂 <b>2. Your madness</b><br>
+    Your silly side brings laughter and makes our conversations memorable.
+  </div>
+
+  <div class="reason">
+    🤝 <b>3. Our friendship</b><br>
+    I'm grateful for the bond we've built and every little moment we share.
+  </div>
+
+  <div class="reason">
+    🌟 <b>4. Being yourself</b><br>
+    You don't need to be perfect to be an amazing person and friend.
+  </div>
+
+  <div class="reason">
+    🫶 <b>5. You're YOU!</b><br>
+    There is only one you, and that alone makes you irreplaceable in your own way.
+  </div>
+
+  <p>Never forget how much you are appreciated! 💝</p>
+  <button class="back" onclick="go(1)">← Back</button>
+  <button onclick="go(3)">Our Memories 📸 →</button>
+</section>
+
+<!-- SLIDE 4: MEMORIES -->
+<section class="slide">
+  <div class="big">📸🌈</div>
+  <h2>Our Friendship Memories</h2>
+  <p>
+    Some memories are big, and some are just tiny moments
+    that somehow stay with us. The random talks, unexpected
+    laughs, silly teasing, funny arguments, and those little
+    conversations that turn into stories of their own. 💗
+  </p>
+  <p>
+    Maybe we won't remember every single thing forever,
+    but I hope we always remember how much fun it was
+    to be ourselves around each other.
+  </p>
+  <p>
+    And this is only one chapter. Here's to more laughter,
+    more adventures, more random nonsense, and many more
+    memories waiting to be made! 🥹🫂
+  </p>
+  <p class="wish">Our friendship deserves many more chapters. 📖</p>
+  <button class="back" onclick="go(2)">← Back</button>
+  <button onclick="go(4)">Make a Wish 🕯️ →</button>
+</section>
+
+<!-- SLIDE 5: MAKE A WISH -->
+<section class="slide">
+  <div class="big" id="cake">🎂🕯️</div>
+  <h2>Make a Birthday Wish! 🌠</h2>
+  <p>Close your eyes for a moment, think of something your heart wishes for, and tap the button below. 💗</p>
+  <button id="wishBtn" onclick="makeWish()">✨ I've Made My Wish!</button>
+  <p id="wishText" class="hidden">
+    🌟 May your wish find its way to you! 🌟<br><br>
+    May this new chapter bring you happiness, courage,
+    beautiful opportunities, good health, and reasons
+    to smile every day. Keep believing in yourself! 💝
+  </p>
+  <p id="giftPrompt" class="hidden">One last surprise is waiting... 🎁</p>
+  <button class="back" onclick="go(3)">← Back</button>
+  <button onclick="go(5)">Final Birthday Message 💌 →</button>
+</section>
+
+<!-- SLIDE 6: LONG BIRTHDAY WISH -->
+<section class="slide">
+  <div class="big">🎉🎂💖</div>
+  <h1>Happiest Birthday, Bestu! 🐼</h1>
+  <p>
+    First of all, happy birthday to you! 🥳💗 I hope today
+    brings you the kind of happiness that stays with you
+    long after the candles have been blown out. May your
+    life be filled with beautiful surprises, genuine people,
+    peaceful days, unforgettable adventures, and countless
+    reasons to smile. You deserve the chance to explore
+    your dreams, discover new things about yourself, and
+    become the person you have always wanted to be.
+  </p>
+  <p>
+    On your special day, I just want you to know that
+    I'm genuinely happy we became friends. Thank you for
+    being a part of my life and for all the little moments
+    that make our friendship what it is. I hope we continue
+    to share random jokes, laugh at the most unnecessary
+    things, tease each other, and create memories that we'll
+    look back on with the biggest smiles. Even when life
+    becomes busy and everything around us changes, I hope
+    we always make time to check in on each other and
+    celebrate each other's little and big achievements.
+  </p>
+  <p>
+    May you always have the courage to chase your dreams,
+    the strength to get through difficult days, and the
+    wisdom to appreciate the beautiful things already
+    around you. Never let one bad day make you doubt
+    your worth or your potential. Keep growing, keep
+    learning, keep laughing, and keep being your wonderfully
+    unique self. I wish you good health, success, peace,
+    genuine happiness, and a future that makes you proud.
+  </p>
+  <p>
+    And finally, bestie, I hope this birthday becomes
+    another lovely memory for you. Enjoy your cake,
+    collect lots of smiles, take plenty of pictures,
+    and let yourself feel special today. You are celebrated
+    today, tomorrow, and on all the ordinary days in
+    between too. Happy Birthday once again! And I miss u yaar 🥹🎂🎈
+    
+  </p>
+  <h2>Stay Happy. Stay Awesome. Stay You.Lots of love  💝</h2>
+  <div class="big">🎈🎊🎁</div>
+  <button onclick="party()">Celebrate Again! 🎉</button>
+  <button class="back" onclick="go(4)">← Back</button>
+  <button onclick="go(0)">Replay Surprise ↻</button>
+</section>
+
+</main>
+
+<div id="progress">Slide 1 of 6</div>
+
+<script>
+let current = 0;
+const slides = document.querySelectorAll(".slide");
+
+function go(n) {
+  if (n < 0 || n >= slides.length) return;
+  slides[current].classList.remove("active");
+  current = n;
+  slides[current].classList.add("active");
+  document.getElementById("progress").textContent =
+    "Slide " + (current + 1) + " of " + slides.length;
+  window.scrollTo(0, 0);
+}
+
+function balloon() {
+  const b = document.createElement("div");
+  b.className = "balloon";
+  b.textContent = ["🎈", "💗", "✨", "🎉", "💖"][
+    Math.floor(Math.random() * 5)
+  ];
+  b.style.left = Math.random() * 95 + "%";
+  b.style.animationDuration = (5 + Math.random() * 5) + "s";
+  document.getElementById("sky").appendChild(b);
+  setTimeout(() => b.remove(), 10000);
+}
+
+setInterval(balloon, 850);
+
+function makeWish() {
+  document.getElementById("cake").textContent = "🎂💨✨";
+  document.getElementById("wishText").classList.remove("hidden");
+  document.getElementById("giftPrompt").classList.remove("hidden");
+  document.getElementById("wishBtn").textContent = "Wish Made! 💖";
+  document.getElementById("wishBtn").disabled = true;
+  for (let i = 0; i < 15; i++) {
+    setTimeout(balloon, i * 100);
+  }
+}
+
+function party() {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(balloon, i * 100);
+  }
+  alert("HAPPY BIRTHDAY, BESTIE!! 🎂💗🎉");
+}
+</script>
+</body>
+</html>
